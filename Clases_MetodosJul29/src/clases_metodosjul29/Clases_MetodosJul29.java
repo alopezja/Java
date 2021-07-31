@@ -26,50 +26,53 @@ public class Clases_MetodosJul29 {
         ArrayList <Alumno> l_Alumnos = new ArrayList<Alumno>();
         
         Alumno Obj_Alumno = new Alumno ();
+        Alumno Obj_Alumno2 = new Alumno ();
+        
         
         Obj_Alumno.SetId(1);
         Obj_Alumno.SetNombre("Alex");
         Obj_Alumno.SetApellido("López");
         
-        //l_Alumnos.add(Obj_Alumno);
+        l_Alumnos.add(Obj_Alumno);
         
         System.out.println("Estados atributos 1\nId: "+Obj_Alumno.GetId()
                             +"\nNombre: "+Obj_Alumno.GetNombre()
                             +"\nApellido: "+Obj_Alumno.GetApellido()+"\n");
         
-        Obj_Alumno.SetId(2);
-        Obj_Alumno.SetNombre("Valentina");
-        Obj_Alumno.SetApellido("López");
+        Obj_Alumno2.SetId(2);
+        Obj_Alumno2.SetNombre("Valentina");
+        Obj_Alumno2.SetApellido("López");
         
-        //l_Alumnos.add(Obj_Alumno);
+        l_Alumnos.add(Obj_Alumno2);
         
-        System.out.println("Estados atributos 2\nId: "+Obj_Alumno.GetId()
-                            +"\nNombre: "+Obj_Alumno.GetNombre()
-                            +"\nApellido: "+Obj_Alumno.GetApellido()+"\n");
+        System.out.println("Estados atributos 2\nId: "+Obj_Alumno2.GetId()
+                            +"\nNombre: "+Obj_Alumno2.GetNombre()
+                            +"\nApellido: "+Obj_Alumno2.GetApellido()+"\n");
         
         System.out.println("INGRESANDO VALORES DE USUARIO\n");
         
         for (int i=0;i<2;i++)
         {
-        System.out.print("Digite el Id: ");
-        id = sc.nextInt();
-        System.out.print("Digite el Nombre: ");
-        nombre = sc.next();
-        System.out.print("Digite el Apellido: ");
-        apellido = sc.next();
-        
-        System.out.println("");
-        
-        Obj_Alumno.SetId(id);
-        Obj_Alumno.SetNombre(nombre);
-        Obj_Alumno.SetApellido(apellido);
-        
-        l_Alumnos.add(Obj_Alumno);
+            Alumno Obj_Alumno3 = new Alumno (); //El objeto siempre se debe crear para no reemplazar el anterior
+            System.out.print("Digite el Id: ");
+            id = sc.nextInt();
+            System.out.print("Digite el Nombre: ");
+            nombre = sc.next();
+            System.out.print("Digite el Apellido: ");
+            apellido = sc.next();
+
+            System.out.println("");
+
+            Obj_Alumno3.SetId(id);
+            Obj_Alumno3.SetNombre(nombre);
+            Obj_Alumno3.SetApellido(apellido);
+
+            l_Alumnos.add(Obj_Alumno3);
         
         /*
-        System.out.println("Alumno #"+(i+1)+"\nId: "+Obj_Alumno.GetId()
-                            +"\nNombre: "+Obj_Alumno.GetNombre()
-                            +"\nApellido: "+Obj_Alumno.GetApellido()+"\n");
+        System.out.println("Alumno #"+(i+1)+"\nId: "+Obj_Alumno3.GetId()
+                            +"\nNombre: "+Obj_Alumno3.GetNombre()
+                            +"\nApellido: "+Obj_Alumno3.GetApellido()+"\n");
         */
         
         }
