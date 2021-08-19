@@ -29,20 +29,33 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menuOperaciones = new javax.swing.JMenuItem();
+        menuRadio = new javax.swing.JMenuItem();
+        menuControles = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu1.setText("Inicio");
 
-        jMenuItem1.setText("Operaciones");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        menuOperaciones.setText("Operaciones");
+        menuOperaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                menuOperacionesActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(menuOperaciones);
+
+        menuRadio.setText("Radio / Check");
+        jMenu1.add(menuRadio);
+
+        menuControles.setText("Controles");
+        menuControles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuControlesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuControles);
 
         jMenuBar1.add(jMenu1);
 
@@ -65,13 +78,21 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void menuOperacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOperacionesActionPerformed
         // TODO add your handling code here:
         
         Operaciones frmOperaciones = new Operaciones();
         frmOperaciones.setVisible(true);
         
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_menuOperacionesActionPerformed
+
+    private void menuControlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuControlesActionPerformed
+        // TODO add your handling code here:
+        
+        Controles frmControles = new Controles();
+        frmControles.setVisible(true);
+        
+    }//GEN-LAST:event_menuControlesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,6 +133,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem menuControles;
+    private javax.swing.JMenuItem menuOperaciones;
+    private javax.swing.JMenuItem menuRadio;
     // End of variables declaration//GEN-END:variables
 }
