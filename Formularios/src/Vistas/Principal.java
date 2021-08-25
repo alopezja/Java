@@ -32,6 +32,7 @@ public class Principal extends javax.swing.JFrame {
         menuOperaciones = new javax.swing.JMenuItem();
         menuRadio = new javax.swing.JMenuItem();
         menuControles = new javax.swing.JMenuItem();
+        menuConeccion = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,6 +57,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(menuControles);
+
+        menuConeccion.setText("Conexión");
+        menuConeccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuConeccionActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuConeccion);
 
         jMenuBar1.add(jMenu1);
 
@@ -93,6 +102,12 @@ public class Principal extends javax.swing.JFrame {
         frmControles.setVisible(true);
         
     }//GEN-LAST:event_menuControlesActionPerformed
+
+    private void menuConeccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuConeccionActionPerformed
+        // TODO add your handling code here:
+        Conectar frmconectar = new Conectar();
+        frmconectar.setVisible(true);
+    }//GEN-LAST:event_menuConeccionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,6 +148,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuConeccion;
     private javax.swing.JMenuItem menuControles;
     private javax.swing.JMenuItem menuOperaciones;
     private javax.swing.JMenuItem menuRadio;
