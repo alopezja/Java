@@ -51,6 +51,14 @@ return Obj_profesor;
        return nominaNeta; 
 }
     
+    public static double pagoDeUnProfesor(Profesor profesor, int diasTrabajados){
+        return 1;
+    }
+    
+    public static double deduccionesDeUnProfesor(Profesor profesor, int diasTrabajados){
+        return 1;
+    }
+    
    public static ArrayList <Double> liquidarSegSocial (ArrayList<Profesor> profesores){
       ArrayList <Double> Obj_profesor2 = new ArrayList <Double>();
       //liquidarNominaProfe liquidar = new liquidarNominaProfe();
